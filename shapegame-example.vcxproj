@@ -160,20 +160,13 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="shapegame-example.cpp" />
-    <ClCompile Include="shapegame\deps\getopt.c" />
     <ClCompile Include="shapegame\deps\glad.c" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="shapegame\deps\getopt.h" />
     <ClInclude Include="shapegame\deps\glad\glad.h" />
     <ClInclude Include="shapegame\deps\glfw-win\include\GLFW\glfw3.h" />
     <ClInclude Include="shapegame\deps\glfw-win\include\GLFW\glfw3native.h" />
     <ClInclude Include="shapegame\deps\GL\glcorearb.h" />
-    <ClInclude Include="shapegame\deps\KHR\khrplatform.h" />
-    <ClInclude Include="shapegame\deps\linmath.h" />
-    <ClInclude Include="shapegame\deps\mingw\dinput.h" />
-    <ClInclude Include="shapegame\deps\mingw\xinput.h" />
-    <ClInclude Include="shapegame\deps\mingw\_mingw_dxhelper.h" />
     <ClInclude Include="shapegame\include\CollisionList.hpp" />
     <ClInclude Include="shapegame\include\CollisionTree.hpp" />
     <ClInclude Include="shapegame\include\Color.hpp" />
