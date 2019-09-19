@@ -13,7 +13,7 @@ so you should be able to just compile and run it for your platform
 
 ### Windows
 You should be able to simply open the solution in Visual Studio and run it as long as
-you have to proper C++ development components installed
+you have to proper C++ development components installed (Game development with C++)
 
 
 ### Mac
