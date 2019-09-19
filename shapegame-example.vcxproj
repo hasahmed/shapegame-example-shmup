@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <ProjectGuid>{D730957F-5BC0-468C-8373-06A55F725E02}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>shapegameexample</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <AdditionalIncludeDirectories>$(SolutionDir)shapegame\include;$(SolutionDir)shapegame\deps</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>shapegame.lib;kernel32.lib;user32.lib;gdi32.lib;glfw3dll.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(ProjectDir)shapegame\platform\win;</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <AdditionalIncludeDirectories>$(SolutionDir)shapegame\include;$(SolutionDir)shapegame\deps</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>shapegame.lib;kernel32.lib;user32.lib;gdi32.lib;glfw3dll.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(ProjectDir)shapegame\platform\win;</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="shapegame-example.cpp" />
+    <ClCompile Include="shapegame\deps\getopt.c" />
+    <ClCompile Include="shapegame\deps\glad.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="shapegame\deps\getopt.h" />
+    <ClInclude Include="shapegame\deps\glad\glad.h" />
+    <ClInclude Include="shapegame\deps\glfw-win\include\GLFW\glfw3.h" />
+    <ClInclude Include="shapegame\deps\glfw-win\include\GLFW\glfw3native.h" />
+    <ClInclude Include="shapegame\deps\GL\glcorearb.h" />
+    <ClInclude Include="shapegame\deps\KHR\khrplatform.h" />
+    <ClInclude Include="shapegame\deps\linmath.h" />
+    <ClInclude Include="shapegame\deps\mingw\dinput.h" />
+    <ClInclude Include="shapegame\deps\mingw\xinput.h" />
+    <ClInclude Include="shapegame\deps\mingw\_mingw_dxhelper.h" />
+    <ClInclude Include="shapegame\include\CollisionList.hpp" />
+    <ClInclude Include="shapegame\include\CollisionTree.hpp" />
+    <ClInclude Include="shapegame\include\Color.hpp" />
+    <ClInclude Include="shapegame\include\Component.hpp" />
+    <ClInclude Include="shapegame\include\Debug.hpp" />
+    <ClInclude Include="shapegame\include\DebugKeyHandler.hpp" />
+    <ClInclude Include="shapegame\include\Dirtyable.hpp" />
+    <ClInclude Include="shapegame\include\Drawable.hpp" />
+    <ClInclude Include="shapegame\include\Entity.hpp" />
+    <ClInclude Include="shapegame\include\FileUtil.hpp" />
+    <ClInclude Include="shapegame\include\Game.hpp" />
+    <ClInclude Include="shapegame\include\GLHandler.hpp" />
+    <ClInclude Include="shapegame\include\GLHandlerImpl.hpp" />
+    <ClInclude Include="shapegame\include\Globals.hpp" />
+    <ClInclude Include="shapegame\include\GLRenderObject.hpp" />
+    <ClInclude Include="shapegame\include\Input.hpp" />
+    <ClInclude Include="shapegame\include\IWindow.hpp" />
+    <ClInclude Include="shapegame\include\MultiShape.hpp" />
+    <ClInclude Include="shapegame\include\NullGLHandler.hpp" />
+    <ClInclude Include="shapegame\include\NullRenderer.hpp" />
+    <ClInclude Include="shapegame\include\NullWindow.hpp" />
+    <ClInclude Include="shapegame\include\Object.hpp" />
+    <ClInclude Include="shapegame\include\Point.hpp" />
+    <ClInclude Include="shapegame\include\Position.hpp" />
+    <ClInclude Include="shapegame\include\Quad.hpp" />
+    <ClInclude Include="shapegame\include\Rectangle.hpp" />
+    <ClInclude Include="shapegame\include\RenderPackage.hpp" />
+    <ClInclude Include="shapegame\include\Scene.hpp" />
+    <ClInclude Include="shapegame\include\ShaderHandler.hpp" />
+    <ClInclude Include="shapegame\include\Shape.hpp" />
+    <ClInclude Include="shapegame\include\shapegame.hpp" />
+    <ClInclude Include="shapegame\include\shapegl.hpp" />
+    <ClInclude Include="shapegame\include\ShapePair.hpp" />
+    <ClInclude Include="shapegame\include\SimpleCollision.hpp" />
+    <ClInclude Include="shapegame\include\Square.hpp" />
+    <ClInclude Include="shapegame\include\Timer.hpp" />
+    <ClInclude Include="shapegame\include\Tree.hpp" />
+    <ClInclude Include="shapegame\include\Triangle.hpp" />
+    <ClInclude Include="shapegame\include\TriangleIsosceles.hpp" />
+    <ClInclude Include="shapegame\include\VertexGenerator.hpp" />
+    <ClInclude Include="shapegame\include\Window.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <CopyFileToFolders Include="shapegame\platform\win\glfw3.dll">
+      <FileType>Document</FileType>
+    </CopyFileToFolders>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
