@@ -167,6 +167,7 @@
     <ClInclude Include="shapegame\deps\glfw-win\include\GLFW\glfw3.h" />
     <ClInclude Include="shapegame\deps\glfw-win\include\GLFW\glfw3native.h" />
     <ClInclude Include="shapegame\deps\GL\glcorearb.h" />
+    <ClInclude Include="shapegame\include\Circle.hpp" />
     <ClInclude Include="shapegame\include\CollisionList.hpp" />
     <ClInclude Include="shapegame\include\CollisionTree.hpp" />
     <ClInclude Include="shapegame\include\Color.hpp" />

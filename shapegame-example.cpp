@@ -195,6 +195,7 @@ int main() {
 		Game::inst().scene->addChild(std::make_unique<Enemy>(Position(enemySpawnX, -(ENEMY_HEIGHT + 20))));
 		}
 	));
+	game.scene->addChild(std::make_unique<Circle>(Position(100, 100), 100, Color::BLACK));
 	// finally starting the game
 	game.run();
 	// exercise for the reader: give all object shadows (HINT: Make them MultiShapes)

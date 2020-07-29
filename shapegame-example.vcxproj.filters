@@ -158,8 +158,11 @@
     <ClInclude Include="shapegame\include\Window.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="shapegame\include\Circle.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="shapegame\deps\glfw\lib\win\glfw3.dll" />
+    <CopyFileToFolders Include="shapegame\platform\win\glfw3.dll" />
   </ItemGroup>
 </Project>
