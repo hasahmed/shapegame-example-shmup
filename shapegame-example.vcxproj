@@ -159,7 +159,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="shapegame-example.cpp" />
+    <ClCompile Include="rotation-example.cpp" />
     <ClCompile Include="shapegame\deps\glad.c" />
   </ItemGroup>
   <ItemGroup>
