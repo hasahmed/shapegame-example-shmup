@@ -13,11 +13,21 @@ int main() {
 	//[> Add a convenience key handler that closes the window when escape is pressed <]
 	game.scene->addChild(std::make_unique<DebugKeyHandler>());
 
-	game.scene->addChild(std::make_unique<Circle>(Position(100, 100), 100, Color::BLACK));
+	Circle* circle = game.scene->addChildAs<Circle>(std::make_unique<Circle>(Position(100, 100), 100, Color::BLACK));
 
-	game.scene->addChild(std::make_unique<Triangle>(Position(100, 300), Point(200, 300), Point(150, 400), Color::GREEN));
+	Triangle* triangle = game.scene->addChildAs<Triangle>(std::make_unique<Triangle>(Position(100, 300), Point(200, 300), Point(150, 400), Color::GREEN));
+	game.scene->addChild(std::make_unique<Timer>(10, true, true, [&triangle, &circle]() {
+		//circle->rotate(1);
+		triangle->rotate(1);
+		//std::cout << triangle->pos << std::endl;
+		//std::cout << triangle->second << std::endl;
+	}));
+	triangle->rotate(60);
+	//triangle->rotate(1);
+	//triangle->rotate(90);
 	// finally starting the game
 	game.run();
-	// exercise for the reader: give all object shadows (HINT: Make them MultiShapes)
-	// and also make all movement 'frame rate independent'
+	// exercise for the reader:
+		// - Give all object shadows (HINT: Make them MultiShapes)
+		// - Make all movement 'frame rate independent'
 }
