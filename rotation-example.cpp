@@ -23,11 +23,15 @@ int main() {
 	//std::cout << triangle->pos << std::endl;
 	game.scene->addChild(std::make_unique<Timer>(10, true, true, [&triangle, &circle]() {
 		//triangle->translate(0, 0);
-		triangle->rotate(-1);
+		triangle->rotateAround(1, *circle);
 		circle->rotate(-1);
-		if (triangle->getRotation() <= -90) {
-			triangle->setRotation(0);
-		}
+		std::cout << triangle->getRotation() << std::endl;
+		//std::cout << triangle->getNextRotation() << std::endl;
+		//if (triangle->getRotation() >= 90) {
+		//	triangle->setRotation(0);
+		//	//std::cout << triangle->getRotation() << std::endl;
+		//	//std::cout << triangle->getNextRotation() << std::endl;
+		//}
 		//std::cout << circle->pos << std::endl;
 		//std::cout << triangle->pos << std::endl;
 		//std::cout << triangle->pos << std::endl;

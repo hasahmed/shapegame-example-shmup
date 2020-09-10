@@ -4,16 +4,18 @@
 #include "Input.hpp"
 #include "Dirtyable.hpp"
 #include "Point.hpp"
+#include "RotationInfo.hpp"
 namespace shapegame {
 	using namespace Input;
     class Object : public Dirtyable {
 			friend class Scene;
 			friend class Position;
 			friend class MultiShape;
+			friend class RenderPackage;
 			private:
 				float height = 0.0f;
 				float width = 0.0f;
-				float _rotation = 0;
+				RotationInfo rotationInfo;
 				bool canKill = false;
 				bool _dirty = false;
 				bool _inScene = false;
@@ -24,9 +26,10 @@ namespace shapegame {
 				Position pos;
 				Object();
 				Object(double x, double y); //should be floats
-				Object(Point pos); //should be a position
+				Object(Point pos);
 				void kill();
 				Object* getParent();
+				Object* getRoot();
 				virtual ~Object();
 				virtual void update();
 				virtual void onAdd();
@@ -40,7 +43,12 @@ namespace shapegame {
 				virtual float getWidth();
 				void translate(float x, float y);
 				void rotate(float degrees);
+				void rotateAround(float degrees, Point origin);
+				void rotateAround(float degrees, Object &origin);
+				void setRotation(float degrees);
 				float getRotation() const;
+				float getNextRotation() const;
+				RotationInfo& getRotationInfo();
 				bool isInScene(); //what? why?
 				void setDirty(bool dirty) override; //private?
 				bool isDirty() override; //private
