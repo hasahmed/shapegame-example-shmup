@@ -21,6 +21,9 @@
     <ClCompile Include="rotation-example.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="shmup-example.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="shapegame\deps\GL\glcorearb.h">

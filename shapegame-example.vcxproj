@@ -161,6 +161,7 @@
   <ItemGroup>
     <ClCompile Include="rotation-example.cpp" />
     <ClCompile Include="shapegame\deps\glad.c" />
+    <ClCompile Include="shmup-example.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="shapegame\deps\glad\glad.h" />
